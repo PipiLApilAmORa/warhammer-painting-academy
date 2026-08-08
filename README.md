@@ -1,26 +1,12 @@
-# Archie's Warhammer Painting Academy — V8
+# Archie's Warhammer Painting Academy — V9
 
-V8 is rebuilt directly from the complete V7 package.
+V9 fixes only the top-left official Warhammer Aquila display.
 
-## Only functional/visual change
-The top-left homepage emblem is replaced with the official Games Workshop
-Warhammer 40,000 Aquila artwork from Warhammer Community's “Top 5 Eagles” page.
+What changed:
+- regenerated the Aquila from the FULL official Warhammer Community source image
+- kept the largest connected component, which preserves both full wings and removes
+  the separate Warhammer Community wordmark
+- added transparent padding around the logo
+- increased the header logo container so the wings cannot be clipped
 
-Processing:
-- cropped out the Warhammer Community wordmark
-- removed the white background
-- preserved the official Aquila silhouette
-- recolored the silhouette gold
-- exported as a transparent PNG
-
-New asset:
-- assets/official-warhammer-aquila-gold.png
-
-Everything else is exactly the V7 website:
-- home layout and campaign artwork
-- Campaign/Mission pages
-- 60 missions
-- videos and search hints
-- Gallery and Achievements text
-- XP/unlock logic
-- local saved progress
+Everything else is identical to V8.

@@ -828,3 +828,21 @@ body.v5-home .brand-emblem:after{
     height:58px !important;
   }
 }
+
+
+/* V9 — full official Aquila fit fix */
+body.v5-home .brand-emblem{
+  width:132px !important;
+  height:84px !important;
+  flex:0 0 132px !important;
+  background-position:center center !important;
+  background-size:contain !important;
+  overflow:visible !important;
+}
+@media(max-width:720px){
+  body.v5-home .brand-emblem{
+    width:96px !important;
+    height:64px !important;
+    flex-basis:96px !important;
+  }
+}
