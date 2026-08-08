@@ -35,10 +35,9 @@ function home(){
       <div class="v5-hero-copy">
         <div class="v5-kicker"><span></span>PERSONAL TRAINING CAMPAIGN</div>
         <h1>PAINT AT YOUR OWN PACE.</h1>
-        <div class="v5-hero-cn">
-          <p>没有 Day 1、Day 2，也没有连续打卡压力。</p>
-          <p>选择当前战役里的任意 Mission，慢慢完成。</p>
-          <p>只有完成整个战役，下一章才会解锁。</p>
+        <div class="v5-hero-cn v6-home-message">
+          <p>给牙牙小猫开设的专属战锤涂装小课堂！请选择当前战役里的任意 Mission，慢慢完成。只有完成整个战役，下一个战役才会解锁。</p>
+          <p>由于制作者 zzm 并没有丰富的战锤经验，此课堂的所有内容都仅供参考，小猫可以按照自己的想法随意更改自己的学习内容，此课堂仅起到为小猫减少决策疲劳、提供学习建议的作用。</p>
         </div>
       </div>
     </section>
@@ -82,7 +81,7 @@ function v5Metric(icon,en,zh,val,extra=''){
 function campaignBanner(c,i){
   const u=unlocked(i);
   const d=c.missions.filter(m=>complete(m.id)).length;
-  const art=i===0?'recruit':i===1?'battle':'generic';
+  const art=i===0?'recruit':i===1?'battle':i===2?'veteran':i===3?'sergeant':i===4?'commission':'master';
   const cleared=cdone(i);
 
   return `<article class="v5-campaign ${art} ${u?'':'locked'} ${cleared?'cleared':''}" data-i="${i}">
@@ -256,10 +255,14 @@ function mission(id){
 }
 
 function bi(title,en,zh){
-  return `<section class="section"><h2>${title}</h2><div class="bilingual">
-    <div class="lang"><small>ENGLISH</small><p>${en}</p></div>
-    <div class="lang"><small>中文</small><p>${zh}</p></div>
-  </div></section>`;
+  return `<section class="section"><h2>${title}</h2>
+    <div class="bilingual v6-bilingual">
+      <div class="lang v6-lang">
+        <p>${en}</p>
+        <p class="v6-zhline">${zh}</p>
+      </div>
+    </div>
+  </section>`;
 }
 
 function photoSave(id,f){

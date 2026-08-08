@@ -716,3 +716,58 @@ body.v5-home .topbar nav button span{font-size:23px}
   .v5-campaign-state{grid-column:2;width:auto;justify-self:start;text-align:left;padding:0 0 15px 10px}
   .v5-campaign-state b{right:14px}
 }
+
+
+/* ============================================================
+   V6 targeted changes only
+   ============================================================ */
+
+/* Home copy: slightly smaller so the requested longer note fits elegantly. */
+.v6-home-message{
+  max-width:820px;
+}
+.v6-home-message p{
+  margin:0 0 9px;
+  font-size:15px;
+  line-height:1.7;
+  color:#d8d3c9;
+}
+
+/* Every later Campaign now gets artwork as well. */
+.v5-campaign.veteran{
+  background:#08090a url("assets/v6-veteran-art.webp") 64% center/auto 108% no-repeat;
+}
+.v5-campaign.sergeant{
+  background:#08090a url("assets/v6-sergeant-art.webp") 64% center/auto 108% no-repeat;
+}
+.v5-campaign.commission{
+  background:#08090a url("assets/v6-commission-art.webp") 64% center/auto 108% no-repeat;
+}
+.v5-campaign.master{
+  background:#08090a url("assets/v6-master-art.webp") 64% center/auto 108% no-repeat;
+}
+
+/* Mission bilingual blocks: remove ENGLISH / 中文 label row and wasted space. */
+.v6-bilingual{
+  grid-template-columns:1fr;
+  gap:0;
+}
+.v6-lang{
+  padding:13px 14px;
+}
+.v6-lang p{
+  margin:0;
+}
+.v6-lang .v6-zhline{
+  margin-top:7px;
+  padding-top:7px;
+  border-top:1px solid rgba(255,255,255,.055);
+  color:#d9d3c7;
+}
+
+@media(max-width:720px){
+  .v6-home-message p{
+    font-size:13px;
+    line-height:1.62;
+  }
+}

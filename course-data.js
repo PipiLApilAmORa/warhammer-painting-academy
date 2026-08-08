@@ -728,7 +728,7 @@ window.COURSES=[
     "id": "battle-brother",
     "roman": "II",
     "title": "THE BATTLE BROTHER",
-    "title_zh": "战斗兄弟",
+    "title_zh": "战士",
     "subtitle_en": "Improve finish quality while staying relaxed and repeatable.",
     "subtitle_zh": "在保持轻松和可重复的前提下，提高完成度。",
     "rank": "Battle Brother",
