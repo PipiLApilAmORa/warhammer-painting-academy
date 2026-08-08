@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070809">
+  <meta name="description" content="Archie's Warhammer Painting Academy">
+  <title>Archie's Warhammer Painting Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="academy-brand" href="#/campaigns" aria-label="Home">
+      <span class="brand-emblem">A</span>
+      <span class="brand-copy">
+        <strong>ARCHIE'S</strong>
+        <small>WARHAMMER PAINTING ACADEMY</small>
+      </span>
+    </a>
+    <nav>
+      <button data-nav="campaigns"><span>⚔</span> CAMPAIGNS / 战役</button>
+      <button data-nav="gallery"><span>▣</span> GALLERY / 画廊</button>
+      <button data-nav="achievements"><span>♜</span> ACHIEVEMENTS / 成就</button>
+    </nav>
+  </header>
+
+  <main id="app"></main>
+
+  <div class="toast" id="toast"></div>
+  <script src="course-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
