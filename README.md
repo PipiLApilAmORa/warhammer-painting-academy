@@ -1,41 +1,26 @@
-# Archie's Warhammer Painting Academy — V7
+# Archie's Warhammer Painting Academy — V8
 
-V7 is a targeted update based directly on V6.
+V8 is rebuilt directly from the complete V7 package.
 
-## Changes requested in V7
+## Only functional/visual change
+The top-left homepage emblem is replaced with the official Games Workshop
+Warhammer 40,000 Aquila artwork from Warhammer Community's “Top 5 Eagles” page.
 
-1. Home Campaign II background replaced with an official Warhammer 40,000 Space Marines artwork crop.
-2. Home Campaign IV background replaced with an official Warhammer 40,000 artwork crop.
-3. Home Campaign V background replaced with an official Warhammer 40,000 artwork crop.
-4. The three replacement banner files are cropped from artwork-only regions:
-   - no embedded LOCK icon
-   - no embedded words
-   - no watermark / Warhammer wordmark in the banner crop
-5. The top-left emblem is now the actual Warhammer 40,000 Imperial Aquila, recolored gold.
-6. The redundant decorative lock icon in locked HOME campaign banners is removed.
-   The existing `LOCKED / 未解锁` text remains.
-7. Gallery copy changed to:
-   “战锤棋子大师牙牙的成长记录！未测试功能，如有bug还请小猫及时联系监工猫zzm修理之。以上！”
-8. Achievements copy changed to:
-   “居然已经走了这么多路啦，好厉害！”
+Processing:
+- cropped out the Warhammer Community wordmark
+- removed the white background
+- preserved the official Aquila silhouette
+- recolored the silhouette gold
+- exported as a transparent PNG
 
-## Not changed
+New asset:
+- assets/official-warhammer-aquila-gold.png
 
-- Campaign inner pages
-- Mission UI
-- 60 Mission course content
-- videos / search hints
-- Practice / Pass Criteria / Common Mistakes
-- Reflection / photo upload
-- XP and unlock logic
-- saved local progress
-
-## Upload to GitHub Pages
-
-Safest option: replace the repository contents with the unzipped V7 package.
-
-Important new assets:
-- assets/imperial-aquila-gold.png
-- assets/v7-campaign2-official.webp
-- assets/v7-campaign4-official.webp
-- assets/v7-campaign5-official.webp
+Everything else is exactly the V7 website:
+- home layout and campaign artwork
+- Campaign/Mission pages
+- 60 missions
+- videos and search hints
+- Gallery and Achievements text
+- XP/unlock logic
+- local saved progress
