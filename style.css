@@ -771,3 +771,60 @@ body.v5-home .topbar nav button span{font-size:23px}
     line-height:1.62;
   }
 }
+
+
+/* ============================================================
+   V7 TARGETED HOME PATCH
+   - Official Warhammer artwork for Campaign II / IV / V
+   - Genuine Imperial Aquila asset in header
+   - No extra lock icon on locked campaign banners
+   ============================================================ */
+
+/* Real Imperial Aquila: replace the previous CSS-drawn emblem. */
+body.v5-home .brand-emblem{
+  width:116px !important;
+  height:78px !important;
+  background:url("assets/imperial-aquila-gold.png") center/contain no-repeat !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+body.v5-home .brand-emblem:before,
+body.v5-home .brand-emblem:after{
+  display:none !important;
+  content:none !important;
+}
+
+/* Campaign II — official Space Marines wallpaper crop. */
+.v5-campaign.battle{
+  background:
+    #08090a url("assets/v7-campaign2-official.webp")
+    63% center / cover no-repeat !important;
+}
+
+/* Campaign IV — official Warhammer 40,000 Tyranids wallpaper crop. */
+.v5-campaign.sergeant{
+  background:
+    #08090a url("assets/v7-campaign4-official.webp")
+    64% center / cover no-repeat !important;
+}
+
+/* Campaign V — official Warhammer 40,000 Sisters artwork crop. */
+.v5-campaign.commission{
+  background:
+    #08090a url("assets/v7-campaign5-official.webp")
+    63% center / cover no-repeat !important;
+}
+
+/* There is already a textual LOCKED / 未解锁 state on the right.
+   Explicitly hide the older decorative lock block if one remains. */
+.v5-campaign-state .v5-lock{
+  display:none !important;
+}
+
+@media(max-width:720px){
+  body.v5-home .brand-emblem{
+    width:82px !important;
+    height:58px !important;
+  }
+}

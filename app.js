@@ -100,7 +100,7 @@ function campaignBanner(c,i){
     <div class="v5-campaign-state">
       ${u
         ? `<strong>${d} / ${c.missions.length}</strong><span>MISSIONS</span><b>›</b>`
-        : `<div class="v5-lock">▣</div><strong>LOCKED</strong><span>未解锁</span><small>Complete Campaign ${i} to unlock<br>完成上一战役以解锁</small>`
+        : `<strong>LOCKED</strong><span>未解锁</span><small>Complete Campaign ${i} to unlock<br>完成上一战役以解锁</small>`
       }
     </div>
   </article>`;
@@ -289,7 +289,7 @@ function gallery(){
   const items=all().filter(m=>state.photos[m.id]);
   app.innerHTML=`<div class="page-pad">
     <section class="home-hero" style="min-height:270px;background:linear-gradient(90deg,#090a0b,rgba(9,10,11,.82)),url('assets/hero-marine.webp') right 38%/auto 120% no-repeat">
-      <div class="hero-copy"><div class="kicker">GALLERY / 画廊</div><h1 style="font-size:70px">YOUR PAINTING JOURNEY</h1><p>每一次上传都会成为成长记录。当前 V4 仍保存于这个浏览器；后续可以接云端同步。</p></div>
+      <div class="hero-copy"><div class="kicker">GALLERY / 画廊</div><h1 style="font-size:70px">YOUR PAINTING JOURNEY</h1><p>战锤棋子大师牙牙的成长记录！未测试功能，如有bug还请小猫及时联系监工猫zzm修理之。以上！</p></div>
     </section>
     ${items.length?`<section class="gallery-grid" style="margin-top:22px">${items.map(m=>`<article class="gallery-item card">
       <img src="${state.photos[m.id]}" alt="${m.title_en}">
@@ -314,7 +314,7 @@ function badges(){
   ];
   app.innerHTML=`<div class="page-pad">
     <section class="home-hero" style="min-height:270px;background:linear-gradient(90deg,#090a0b,rgba(9,10,11,.82)),url('assets/hero-marine.webp') right 38%/auto 120% no-repeat">
-      <div class="hero-copy"><div class="kicker">ACHIEVEMENTS / 成就</div><h1 style="font-size:70px">NO STREAKS. JUST PROGRESS.</h1><p>成就只记录已经学会和完成的东西，不设置断签惩罚。</p></div>
+      <div class="hero-copy"><div class="kicker">ACHIEVEMENTS / 成就</div><h1 style="font-size:70px">NO STREAKS. JUST PROGRESS.</h1><p>居然已经走了这么多路啦，好厉害！</p></div>
     </section>
     <section class="badges" style="margin-top:22px">${ds.map(d=>`<article class="badge card ${d[3]()?'':'locked'}"><div class="icon">${d[0]}</div><h3>${d[1]}</h3><p>${d[2]}</p></article>`).join('')}</section>
   </div>`;
