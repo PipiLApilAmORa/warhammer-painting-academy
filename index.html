@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101114" />
+  <title>Warhammer Painting Academy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="hero">
+    <div>
+      <p class="eyebrow">COMMISSION PAINTER · PHASE I</p>
+      <h1>Warhammer Painting Academy</h1>
+      <p class="subtitle">不用决定今天学什么。打开、完成任务、打勾。</p>
+    </div>
+    <div class="rank-card">
+      <span id="rankIcon">⚔️</span>
+      <div>
+        <small>CURRENT RANK</small>
+        <strong id="rankName">Recruit</strong>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard card">
+      <div class="xp-row">
+        <div>
+          <small>LEVEL <span id="level">1</span></small>
+          <div class="xpbar"><div id="xpFill"></div></div>
+          <p><span id="xp">0</span> XP · <span id="xpNext">100</span> XP to next level</p>
+        </div>
+        <div class="big-progress">
+          <span id="percent">0%</span>
+          <small>Phase I Complete</small>
+        </div>
+      </div>
+      <div class="stats">
+        <div><strong id="tasksDone">0</strong><span>Tasks</span></div>
+        <div><strong id="daysDone">0</strong><span>Days Cleared</span></div>
+        <div><strong id="badgesDone">0</strong><span>Badges</span></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <section class="card mission">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">TODAY'S MISSION</p>
+            <h2 id="missionTitle">Day 1 · Paint Control</h2>
+          </div>
+          <select id="daySelect" aria-label="选择训练日"></select>
+        </div>
+
+        <div id="missionBody"></div>
+
+        <div class="mission-complete" id="missionComplete">
+          <div>✦</div>
+          <strong>MISSION COMPLETE</strong>
+          <span>今天的训练完成了。</span>
+        </div>
+      </section>
+
+      <aside class="card skill-card">
+        <p class="eyebrow">SKILL TREE</p>
+        <h2>Phase I Fundamentals</h2>
+        <div id="skillTree"></div>
+        <p class="hint">每完成对应训练日，技能节点会自动点亮。</p>
+      </aside>
+    </section>
+
+    <section class="card journal">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">AFTER ACTION REPORT</p>
+          <h2>今天画完，写 30 秒反馈</h2>
+        </div>
+        <span class="autosave">● 自动保存</span>
+      </div>
+
+      <div class="journal-grid">
+        <label>
+          今天最满意的地方
+          <textarea id="bestThing" placeholder="例如：这次底色终于很平整。"></textarea>
+        </label>
+        <label>
+          今天最难的地方
+          <textarea id="hardThing" placeholder="例如：肩甲边缘总是涂出去。"></textarea>
+        </label>
+        <label>
+          下次只改进一件事
+          <textarea id="nextThing" placeholder="例如：下一次把颜料再稀一点。"></textarea>
+        </label>
+        <label>
+          给她看的留言 💌
+          <textarea id="partnerNote" placeholder="例如：今天完成了！我觉得第三个肩甲最好。"></textarea>
+        </label>
+      </div>
+
+      <div class="photo-box">
+        <div>
+          <strong>今日作品照片</strong>
+          <p>选择一张照片，会保存在这个浏览器里。</p>
+        </div>
+        <label class="upload-btn">
+          ＋ Add Photo
+          <input id="photoInput" type="file" accept="image/*" hidden />
+        </label>
+      </div>
+      <div id="photoPreview" class="photo-preview"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">ACHIEVEMENTS</p>
+          <h2>Badges</h2>
+        </div>
+      </div>
+      <div id="badges" class="badges"></div>
+    </section>
+
+    <section class="card roadmap">
+      <p class="eyebrow">THE PATH</p>
+      <h2>第一阶段：从新兵到 Battle Ready</h2>
+      <div class="roadmap-line">
+        <span class="active">Recruit</span>
+        <i></i>
+        <span>Brush Control</span>
+        <i></i>
+        <span>Basecoat</span>
+        <i></i>
+        <span>Shade</span>
+        <i></i>
+        <span>Highlight</span>
+        <i></i>
+        <span>Battle Ready</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>WARHAMMER PAINTING ACADEMY · Personal Training Log</span>
+    <button id="resetBtn">Reset Progress</button>
+  </footer>
+
+  <div class="toast" id="toast">+ XP</div>
+  <script src="script.js"></script>
+</body>
+</html>
